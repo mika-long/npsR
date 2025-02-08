@@ -17,3 +17,5 @@ Imports:
     dplyr,
     httr2,
     purrr
+URL: https://github.com/mika-long/npsR
+BugReports: https://github.com/mika-long/npsR/issues
