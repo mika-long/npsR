@@ -33,12 +33,11 @@ For the code to work, you will also need an API key from NPS, which can be easil
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to get parks from the state of California:
 
 ```{r example}
 library(npsR)
 # Sys.setenv(NPS_API_KEY = "Your key")
-Sys.getenv
 ca_parks <- get_parks(state_code = "CA", limit=10)
 head(ca_parks)
 ```

@@ -25,35 +25,12 @@ website](https://www.nps.gov/subjects/developer/get-started.htm).
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to get parks from the state
+of California:
 
 ``` r
 library(npsR)
 # Sys.setenv(NPS_API_KEY = "Your key")
-Sys.getenv
-#> function (x = NULL, unset = "", names = NA) 
-#> {
-#>     if (is.null(x)) {
-#>         x <- .Internal(Sys.getenv(character(), ""))
-#>         m <- regexpr("=", x, fixed = TRUE)
-#>         n <- substring(x, 1L, m - 1L)
-#>         v <- substring(x, m + 1L)
-#>         if (isFALSE(names)) 
-#>             v[sort.list(n)]
-#>         else {
-#>             v <- structure(v, names = n)
-#>             structure(class = "Dlist", v[sort.list(n)])
-#>         }
-#>     }
-#>     else {
-#>         v <- .Internal(Sys.getenv(as.character(x), as.character(unset)))
-#>         if (isTRUE(names) || (length(x) > 1L && !isFALSE(names))) 
-#>             structure(v, names = x)
-#>         else v
-#>     }
-#> }
-#> <bytecode: 0x000001a3d1d1f000>
-#> <environment: namespace:base>
 ca_parks <- get_parks(state_code = "CA", limit=10)
 head(ca_parks)
 #> # A tibble: 6 × 8
