@@ -29,7 +29,7 @@ You can install the development version of npsR from [GitHub](https://github.com
 pak::pak("mika-long/npsR")
 ```
 
-For the code to work, you will also need an API key from NPS, which can be easily attained from [this website]().
+For the code to work, you will also need an API key from NPS, which can be easily attained from [this website](https://www.nps.gov/subjects/developer/get-started.htm).
 
 ## Example
 
@@ -37,9 +37,10 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library(npsR)
-# Sys.setenv(NPS_API_KEY = "your_key")
-# ca_parks <- get_parks(state_code = "CA", limit=10)
-# head(ca_parks)
+# Sys.setenv(NPS_API_KEY = "Your key")
+Sys.getenv
+ca_parks <- get_parks(state_code = "CA", limit=10)
+head(ca_parks)
 ```
 
 <!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
