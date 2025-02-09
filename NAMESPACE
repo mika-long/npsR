@@ -2,6 +2,8 @@
 
 export(get_amenities)
 export(get_amenities_by_parksplace)
+export(get_articles)
+export(get_campgrounds)
 export(get_park_activities)
 export(get_parks)
 export(get_passport_stamp_locations)
